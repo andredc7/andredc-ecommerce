@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Profile — andre-ecommerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand"><a href="index.html">andre<span>dc</span> Store</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="profile.html" id="nav-profile" style="display:none;">Profile</a>
+      <a href="#" id="nav-user" style="display:none;"></a>
+      <a href="login.html" id="nav-login">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Profile</h2>
+    <div class="card profile-card">
+      <p><strong>Name:</strong> <span id="profile-name"></span></p>
+      <p><strong>Email:</strong> <span id="profile-email"></span></p>
+      <div class="profile-actions">
+        <button id="logout-btn" class="btn">Logout</button>
+        <button id="delete-account-btn" class="btn secondary">Delete Account</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">© 2025 andre-ecommerce</footer>
+
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

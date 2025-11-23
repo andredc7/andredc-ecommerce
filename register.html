@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Register — Andre Dwiyanto Cahyana E-Commerce</title>
+<link rel="stylesheet" href="assets/css/main.css"></head>
+<body>
+  <main class="form-page">
+    <form id="register-form" class="form-card">
+      <h2>Create account</h2>
+      <label>Full name
+        <input name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" required minlength="6" />
+      </label>
+      <div class="form-actions">
+        <button class="btn" type="submit">Register</button>
+        <a href="login.html" class="link">Sign in</a>
+      </div>
+      <p id="register-msg" class="muted"></p>
+    </form>
+  </main>
+
+  <script src="assets/js/navbar.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>

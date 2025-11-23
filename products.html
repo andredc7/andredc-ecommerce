@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Products — Andre Dwiyanto Cahyana E-Commerce</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="brand"><a href="index.html">andre<span>dc</span> Store</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+      <a href="profile.html" id="nav-profile">Profile</a>
+      <a href="login.html" id="nav-login">Login</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Products</h2>
+
+    <div class="controls">
+      <div class="categories">
+        <button class="cat active" data-cat="all">All</button>
+        <button class="cat" data-cat="electronics">Electronics</button>
+        <button class="cat" data-cat="fashion">Fashion</button>
+        <button class="cat" data-cat="accessories">Accessories</button>
+      </div>
+      <input id="searchInput" placeholder="Search products..." />
+    </div>
+
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <footer class="footer">© 2025 andre-ecommerce</footer>
+
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>
