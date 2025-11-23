@@ -1,61 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Product Detail — andre-ecommerce</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/product-detail.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="brand"><a href="index.html">andre<span>dc</span> Store</a></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
+      <a href="product-detail.html">Product Details</a>
       <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
       <a href="profile.html" id="nav-profile" style="display:none;">Profile</a>
-      <a href="#" id="nav-user" style="display:none;"></a>
       <a href="login.html" id="nav-login">Login</a>
     </nav>
   </header>
 
   <main class="container">
-    <div id="product-detail" class="card"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> /
+      <a href="products.html">Products</a> /
+      <span id="bc-name">Product</span>
+    </div>
+
+    <!-- Product Detail -->
+    <div id="product-detail" class="pd-wrapper card"></div>
+
+    <!-- Recommended Section -->
+    <section class="recommended">
+      <h3>You may also like</h3>
+      <div id="recommended-list" class="recommended-list"></div>
+    </section>
+
   </main>
 
   <footer class="footer">© 2025 andre-ecommerce</footer>
 
-  <script src="assets/js/navbar.js" defer></script>
+  <!-- Load scripts in correct order -->
   <script src="assets/js/auth.js" defer></script>
+  <script src="assets/js/navbar.js" defer></script>
   <script src="assets/js/products.js" defer></script>
   <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/product-detail.js" defer></script>
 
-  <script>
-    // Render product detail by id from query string
-    document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(location.search);
-      const id = Number(params.get('id'));
-      const product = PRODUCTS.find(p => p.id === id);
-      const el = document.getElementById('product-detail');
-      if (!product) {
-        el.innerHTML = '<p>Product not found.</p>';
-        return;
-      }
-      el.innerHTML = `
-        <div style="display:flex;gap:18px;flex-wrap:wrap">
-          <img src="${product.img}" alt="${product.name}" style="width:360px;max-width:100%;border-radius:8px">
-          <div style="flex:1">
-            <h2>${product.name}</h2>
-            <p class="muted">Category: ${product.cat}</p>
-            <p class="price">Rp ${product.price.toLocaleString()}</p>
-            <p>${product.description || 'No description available.'}</p>
-            <div style="margin-top:12px">
-              <button class="btn" onclick="addToCart(${product.id})">Add to Cart</button>
-              <a class="btn secondary" href="products.html" style="margin-left:8px">Back to list</a>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-  </script>
 </body>
 </html>

@@ -1,0 +1,66 @@
+.pd-wrapper {
+  padding: 24px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.pd-wrapper img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.pd-info h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.pd-info .price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2563eb;
+  margin: 8px 0 16px;
+}
+
+.qty-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.qty-box button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.recommended {
+  margin-top: 50px;
+}
+
+.recommended-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.recommended-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.recommended-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+}
