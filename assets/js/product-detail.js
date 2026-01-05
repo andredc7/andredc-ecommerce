@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const bc = document.getElementById("bc-name");
 
   if (!product) {
-    el.innerHTML = "<p>Product not found.</p>";
+    window.location.href = "products.html";
     return;
   }
 
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   bc.textContent = product.name;
 
   el.innerHTML = `
-    <div class="pd-wrapper">
       <img src="${product.img}" alt="${product.name}">
 
       <div class="pd-info">
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="btn secondary" href="products.html">Back to Products</a>
         </div>
       </div>
-    </div>
   `;
 
   // quantity selector
